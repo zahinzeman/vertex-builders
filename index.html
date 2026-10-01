@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VERTEX BUILDERS — Precision Architecture & Commercial Construction</title>
+  <meta name="description" content="Leading commercial and high-end residential general contractor. Engineering landmark structures with enduring craftsmanship, safety, and sustainable innovation since 2015.">
+
+  <!-- Preconnect & Preload Google Font Onest -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&display=swap">
+
+  <!-- Preload Hero Poster -->
+  <link rel="preload" as="image" href="assets/hero-poster.jpg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- External Libraries -->
+  <!-- GSAP 3 & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <!-- Supabase JS Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+
+  <!-- Main Application Script -->
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       FIXED / FLOATING NAVIGATION (Appears after hero)
+       ========================================================================= -->
+  <header id="fixedNavbar" class="fixed-nav" aria-label="Main Navigation">
+    <div class="site-container nav-container">
+      <a href="#hero" class="nav-logo" aria-label="VERTEX BUILDERS Homepage">
+        <svg class="logo-glyph" viewBox="0 0 28 28" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8">
+          <rect x="3" y="10" width="10" height="15" />
+          <rect x="15" y="4" width="10" height="21" />
+          <line x1="6" y1="14" x2="10" y2="14" />
+          <line x1="6" y1="18" x2="10" y2="18" />
+          <line x1="18" y1="8" x2="22" y2="8" />
+          <line x1="18" y1="12" x2="22" y2="12" />
+          <line x1="18" y1="16" x2="22" y2="16" />
+        </svg>
+        <span class="logo-text">VERTEX <strong>BUILDERS</strong></span>
+      </a>
+
+      <nav class="desktop-menu" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li>
+            <a href="#about" class="text-roll-link">
+              <span class="roll-box"><span class="roll-primary">ABOUT US</span><span class="roll-secondary">ABOUT US</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects" class="text-roll-link">
+              <span class="roll-box"><span class="roll-primary">OUR PROJECTS</span><span class="roll-secondary">OUR PROJECTS</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#services" class="text-roll-link">
+              <span class="roll-box"><span class="roll-primary">SERVICES</span><span class="roll-secondary">SERVICES</span></span>
+            </a>
+          </li>
+          <li class="has-dropdown">
+            <button type="button" class="text-roll-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              <span class="roll-box"><span class="roll-primary">RESOURCES ▾</span><span class="roll-secondary">RESOURCES ▾</span></span>
+            </button>
+            <div class="nav-dropdown-menu" role="menu">
+              <a href="#news" role="menuitem">Blog & Insights</a>
+              <a href="#faq" role="menuitem">FAQ</a>
+              <a href="#contact" role="menuitem">Contact Support</a>
+              <a href="#404" role="menuitem">404 Error Page</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn-primary nav-cta">
+          <span class="roll-box">
+            <span class="roll-primary">CONTACT US <i data-lucide="arrow-up-right"></i></span>
+            <span class="roll-secondary">CONTACT US <i data-lucide="arrow-up-right"></i></span>
+          </span>
+        </a>
+        <button type="button" class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO OVERLAY NAVIGATION (Absolute over hero)
+       ========================================================================= -->
+  <header id="heroNavbar" class="hero-nav" aria-label="Hero Navigation">
+    <div class="site-container nav-container">
+      <a href="#hero" class="nav-logo" aria-label="VERTEX BUILDERS Homepage">
+        <svg class="logo-glyph" viewBox="0 0 28 28" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8">
+          <rect x="3" y="10" width="10" height="15" />
+          <rect x="15" y="4" width="10" height="21" />
+          <line x1="6" y1="14" x2="10" y2="14" />
+          <line x1="6" y1="18" x2="10" y2="18" />
+          <line x1="18" y1="8" x2="22" y2="8" />
+          <line x1="18" y1="12" x2="22" y2="12" />
+          <line x1="18" y1="16" x2="22" y2="16" />
+        </svg>
+        <span class="logo-text">VERTEX <strong>BUILDERS</strong></span>
+      </a>
+
+      <nav class="desktop-menu" aria-label="Desktop Hero Menu">
+        <ul class="nav-links">
+          <li>
+            <a href="#about" class="text-roll-link">
+              <span class="roll-box"><span class="roll-primary">ABOUT US</span><span class="roll-secondary">ABOUT US</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects" class="text-roll-link">
+              <span class="roll-box"><span class="roll-primary">OUR PROJECTS</span><span class="roll-secondary">OUR PROJECTS</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#services" class="text-roll-link">
+              <span class="roll-box"><span class="roll-primary">SERVICES</span><span class="roll-secondary">SERVICES</span></span>
+            </a>
+          </li>
+          <li class="has-dropdown">
+            <button type="button" class="text-roll-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              <span class="roll-box"><span class="roll-primary">RESOURCES ▾</span><span class="roll-secondary">RESOURCES ▾</span></span>
+            </button>
+            <div class="nav-dropdown-menu" role="menu">
+              <a href="#news" role="menuitem">Blog & Insights</a>
+              <a href="#faq" role="menuitem">FAQ</a>
+              <a href="#contact" role="menuitem">Contact Support</a>
+              <a href="#404" role="menuitem">404 Error Page</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn-primary nav-cta">
+          <span class="roll-box">
+            <span class="roll-primary">CONTACT US <i data-lucide="arrow-up-right"></i></span>
+            <span class="roll-secondary">CONTACT US <i data-lucide="arrow-up-right"></i></span>
+          </span>
+        </a>
+        <button type="button" class="mobile-toggle" id="heroMobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Overlay -->
+  <div id="mobileMenuOverlay" class="mobile-overlay" aria-hidden="true">
+    <div class="mobile-overlay-inner">
+      <div class="mobile-overlay-header">
+        <a href="#hero" class="nav-logo mobile-logo" aria-label="VERTEX BUILDERS Homepage">
+          <svg class="logo-glyph" viewBox="0 0 28 28" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="10" width="10" height="15" />
+            <rect x="15" y="4" width="10" height="21" />
+          </svg>
+          <span class="logo-text">VERTEX <strong>BUILDERS</strong></span>
+        </a>
+        <button type="button" class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="#about" class="mobile-link">ABOUT US</a></li>
+        <li><a href="#projects" class="mobile-link">OUR PROJECTS</a></li>
+        <li><a href="#services" class="mobile-link">SERVICES</a></li>
+        <li class="mobile-accordion">
+          <button type="button" class="mobile-accordion-btn" id="mobileResourcesBtn" aria-expanded="false">
+            <span>RESOURCES</span> <i data-lucide="chevron-down" class="accordion-arrow"></i>
+          </button>
+          <div class="mobile-accordion-content" id="mobileResourcesContent">
+            <a href="#news" class="mobile-sublink">Blog & Articles</a>
+            <a href="#faq" class="mobile-sublink">FAQ</a>
+            <a href="#contact" class="mobile-sublink">Contact Support</a>
+            <a href="#404" class="mobile-sublink">404 Error Page</a>
+          </div>
+        </li>
+        <li><a href="#contact" class="mobile-link">CONTACT US</a></li>
+      </ul>
+      <div class="mobile-overlay-footer">
+        <p class="mobile-contact-line"><i data-lucide="phone"></i> +1 (800) 482-9104</p>
+        <p class="mobile-contact-line"><i data-lucide="mail"></i> inquiries@vertexbuilders.com</p>
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- =========================================================================
+         SECTION 1: HERO (Fullbleed Video / Poster Hero)
+         ========================================================================= -->
+    <section id="hero" class="hero-section" aria-label="Welcome Hero">
+      <div class="hero-media-wrapper">
+        <video id="heroVideo" class="hero-media" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
+          <source src="assets/hero.mp4" type="video/mp4">
+          <!-- Fallback img if video not supported -->
+          <img src="assets/hero-poster.jpg" alt="Commercial skyscraper under construction with tower crane at sunset" class="hero-fallback-img">
+        </video>
+        <div class="hero-overlay" id="heroOverlay"></div>
+      </div>
+
+      <div class="site-container hero-container">
+        <div class="hero-content-row">
+          <!-- Left headline column (742px) -->
+          <div class="hero-left">
+            <div class="hero-eyebrow">
+              <span class="hero-square-bullet" aria-hidden="true"></span>
+              <span>BEST CONSTRUCTION COMPANY IN UNITED STATES</span>
+            </div>
+            <h1 class="hero-title">
+              <span class="hero-title-line"><span class="hero-line-inner">Engineering visions brick by brick</span></span>
+              <span class="hero-title-line"><span class="hero-line-inner">with enduring craftsmanship since 2015</span></span>
+            </h1>
+          </div>
+
+          <!-- Right stat cards pair (474px) -->
+          <div class="hero-right">
+            <div class="hero-stat-pair">
+              <div class="hero-stat-card">
+                <span class="hero-stat-number count-up" data-target="8" data-prefix="0" data-suffix="+">08+</span>
+                <span class="hero-stat-label">Years of experience</span>
+              </div>
+              <div class="hero-stat-divider" aria-hidden="true"></div>
+              <div class="hero-stat-card">
+                <span class="hero-stat-number count-up" data-target="25" data-suffix="+">25+</span>
+                <span class="hero-stat-label">Completed projects</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Video Controls Toggle -->
+      <button type="button" id="heroVideoToggle" class="hero-video-toggle" aria-label="Pause or play background video">
+        <i data-lucide="pause" id="videoToggleIcon"></i>
+      </button>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 2: ABOUT US (Split Intro with 3 Feature Cards & Skyline Line-art)
+         ========================================================================= -->
+    <section id="about" class="section-about" aria-labelledby="aboutSubtitle">
+      <div class="site-container about-container">
+        <div class="about-grid">
+          <!-- Left Column (648px) -->
+          <div class="about-left section-reveal">
+            <div class="subtitle-tag" id="aboutSubtitle">ABOUT VERTEX BUILDERS</div>
+            <h2 class="about-heading">
+              Pioneering architectural precision across commercial, civil, and residential frontiers.
+            </h2>
+            <p class="about-description">
+              Since our founding, Vertex Builders has operated on a foundational principle: that enduring structures arise from absolute engineering fidelity, ethical stewardship, and seamless collaboration between master craftsmen and visionary architects.
+            </p>
+          </div>
+
+          <!-- Right Column (608px) — 2x2 grid with 3 cards -->
+          <div class="about-right">
+            <div class="about-cards-grid">
+              <!-- Card 1: Our history -->
+              <article class="feature-card section-reveal">
+                <div class="icon-with-dot">
+                  <div class="mint-dot" aria-hidden="true"></div>
+                  <i data-lucide="landmark" class="feature-icon"></i>
+                </div>
+                <h3 class="feature-card-title">Our history</h3>
+                <p class="feature-card-text">
+                  Established in 2015, we evolved from a specialized structural framing outfit into a nationally accredited general contractor managing landmark developments.
+                </p>
+              </article>
+
+              <!-- Card 2: Our mission -->
+              <article class="feature-card section-reveal">
+                <div class="icon-with-dot">
+                  <div class="mint-dot" aria-hidden="true"></div>
+                  <i data-lucide="target" class="feature-icon"></i>
+                </div>
+                <h3 class="feature-card-title">Our mission</h3>
+                <p class="feature-card-text">
+                  To forge resilient architectural environments that empower urban communities, exceed environmental mandates, and endure for future generations.
+                </p>
+              </article>
+
+              <!-- Card 3: Our values -->
+              <article class="feature-card section-reveal">
+                <div class="icon-with-dot">
+                  <div class="mint-dot" aria-hidden="true"></div>
+                  <i data-lucide="clipboard-check" class="feature-icon"></i>
+                </div>
+                <h3 class="feature-card-title">Our values</h3>
+                <p class="feature-card-text">
+                  Unbending structural standards, zero-compromise jobsite safety, lean execution, and transparent cost accounting on every project phase.
+                </p>
+              </article>
+
+              <!-- 4th slot intentionally empty in the 2x2 grid -->
+              <div class="about-empty-slot" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Line-art city skyline illustration (bottom-left decoration, overlaps section bottom) -->
+      <div class="about-skyline-decoration" aria-hidden="true">
+        <svg class="skyline-svg" viewBox="0 0 283 206" width="283" height="206" fill="none">
+          <path class="skyline-stroke" d="M 0 205 L 15 205 L 15 140 L 45 140 L 45 205 L 58 205 L 58 95 L 98 95 L 98 50 L 115 50 L 115 205 L 130 205 L 130 110 L 165 75 L 175 75 L 175 205 L 190 205 L 190 135 L 220 135 L 220 205 L 235 205 M 106 50 L 106 20 M 150 205 C 145 190 148 180 152 175 C 158 170 162 175 160 190 L 160 205 M 245 205 C 240 192 245 185 252 185 C 260 185 264 192 260 205 L 283 205" stroke="#D9D9D9" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" />
+          <line class="skyline-stroke" x1="68" y1="110" x2="88" y2="110" stroke="#D9D9D9" stroke-width="1.5" />
+          <line class="skyline-stroke" x1="68" y1="125" x2="88" y2="125" stroke="#D9D9D9" stroke-width="1.5" />
+          <line class="skyline-stroke" x1="68" y1="140" x2="88" y2="140" stroke="#D9D9D9" stroke-width="1.5" />
+          <line class="skyline-stroke" x1="68" y1="155" x2="88" y2="155" stroke="#D9D9D9" stroke-width="1.5" />
+          <line class="skyline-stroke" x1="142" y1="125" x2="162" y2="125" stroke="#D9D9D9" stroke-width="1.5" />
+          <line class="skyline-stroke" x1="142" y1="140" x2="162" y2="140" stroke="#D9D9D9" stroke-width="1.5" />
+          <line class="skyline-stroke" x1="142" y1="155" x2="162" y2="155" stroke="#D9D9D9" stroke-width="1.5" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 3: SELECTED PROJECTS (Dark Ink Section, 3-Card Grid)
+         ========================================================================= -->
+    <section id="projects" class="section-projects" aria-labelledby="projectsSubtitle">
+      <div class="site-container">
+        <!-- Header -->
+        <div class="projects-header section-reveal">
+          <div class="projects-header-left">
+            <div class="subtitle-tag subtitle-dark" id="projectsSubtitle">SELECTED PROJECTS</div>
+            <h2 class="projects-heading">
+              Explore our portfolio of milestone architectural & civil developments.
+            </h2>
+          </div>
+          <div class="projects-header-right">
+            <a href="#contact" class="btn-default btn-white">
+              <span class="roll-box">
+                <span class="roll-primary">SEE ALL PROJECTS <i data-lucide="arrow-up-right"></i></span>
+                <span class="roll-secondary">SEE ALL PROJECTS <i data-lucide="arrow-up-right"></i></span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3-Column Grid (405px x 603px cards with 40px gaps) -->
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card section-reveal" tabindex="0">
+            <div class="project-thumb-wrapper image-reveal-wrapper">
+              <img src="assets/project-1.jpg" alt="Aerial drone view of civil earthworks excavation project" class="project-thumb" width="405" height="518" loading="lazy">
+              <div class="project-hover-badge" aria-hidden="true">
+                <i data-lucide="arrow-up-right"></i>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-location">AUSTIN, TEXAS</span>
+              <h3 class="project-title">
+                <span class="project-title-text">Apex Earthworks & Civil Infrastructure</span>
+              </h3>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card section-reveal" tabindex="0">
+            <div class="project-thumb-wrapper image-reveal-wrapper">
+              <img src="assets/project-2.jpg" alt="Aerial perspective of skyscraper concrete framework under construction" class="project-thumb" width="405" height="518" loading="lazy">
+              <div class="project-hover-badge" aria-hidden="true">
+                <i data-lucide="arrow-up-right"></i>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-location">SEATTLE, WASHINGTON</span>
+              <h3 class="project-title">
+                <span class="project-title-text">Cascade High-Rise Concrete Framework</span>
+              </h3>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card section-reveal" tabindex="0">
+            <div class="project-thumb-wrapper image-reveal-wrapper">
+              <img src="assets/project-3.jpg" alt="Engineers walking on active commercial concrete construction slab" class="project-thumb" width="405" height="518" loading="lazy">
+              <div class="project-hover-badge" aria-hidden="true">
+                <i data-lucide="arrow-up-right"></i>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-location">SAN FRANCISCO, CALIFORNIA</span>
+              <h3 class="project-title">
+                <span class="project-title-text">Transbay Transit Concourse Expansion</span>
+              </h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 4: WHY CHOOSE US (Commitment, Checklist, Counters & Image)
+         ========================================================================= -->
+    <section id="commitment" class="section-commitment" aria-labelledby="commitmentSubtitle">
+      <div class="site-container">
+        <div class="commitment-grid">
+          <!-- Left Column (628px) -->
+          <div class="commitment-left">
+            <div class="commitment-intro section-reveal">
+              <div class="subtitle-tag" id="commitmentSubtitle">OUR COMMITMENT</div>
+              <h2 class="section-heading">Why choose us</h2>
+              <p class="section-paragraph">
+                Selecting the right general contractor defines the financial security, execution speed, and generational permanence of your capital assets. We blend technical mastery with total fiscal accountability.
+              </p>
+            </div>
+
+            <!-- 2-column checklist (274px columns, 40px col gap, 10px row gap) -->
+            <ul class="commitment-checklist section-reveal" aria-label="Our core competitive advantages">
+              <li class="checklist-item">
+                <svg class="check-icon-svg" viewBox="0 0 16 16" width="16" height="16" fill="none">
+                  <path class="check-path" d="M2.5 8.5 L6.5 12.5 L13.5 3.5" stroke="#656565" stroke-width="1.8" stroke-linecap="square" />
+                </svg>
+                <span>Experience and expertise</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="check-icon-svg" viewBox="0 0 16 16" width="16" height="16" fill="none">
+                  <path class="check-path" d="M2.5 8.5 L6.5 12.5 L13.5 3.5" stroke="#656565" stroke-width="1.8" stroke-linecap="square" />
+                </svg>
+                <span>On-time, on-budget</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="check-icon-svg" viewBox="0 0 16 16" width="16" height="16" fill="none">
+                  <path class="check-path" d="M2.5 8.5 L6.5 12.5 L13.5 3.5" stroke="#656565" stroke-width="1.8" stroke-linecap="square" />
+                </svg>
+                <span>Quality craftsmanship</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="check-icon-svg" viewBox="0 0 16 16" width="16" height="16" fill="none">
+                  <path class="check-path" d="M2.5 8.5 L6.5 12.5 L13.5 3.5" stroke="#656565" stroke-width="1.8" stroke-linecap="square" />
+                </svg>
+                <span>Safety and compliance</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="check-icon-svg" viewBox="0 0 16 16" width="16" height="16" fill="none">
+                  <path class="check-path" d="M2.5 8.5 L6.5 12.5 L13.5 3.5" stroke="#656565" stroke-width="1.8" stroke-linecap="square" />
+                </svg>
+                <span>Client-centered approach</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="check-icon-svg" viewBox="0 0 16 16" width="16" height="16" fill="none">
+                  <path class="check-path" d="M2.5 8.5 L6.5 12.5 L13.5 3.5" stroke="#656565" stroke-width="1.8" stroke-linecap="square" />
+                </svg>
+                <span>Innovative solutions</span>
+              </li>
+            </ul>
+
+            <!-- 2x2 Counters Grid (top margin 115px, 1px top border) -->
+            <div class="commitment-counters section-reveal">
+              <div class="counter-block">
+                <span class="counter-number count-up" data-target="100" data-suffix="%">100%</span>
+                <span class="counter-label">CLIENT SATISFACTION</span>
+              </div>
+              <div class="counter-block">
+                <span class="counter-number count-up" data-target="8" data-prefix="0">08</span>
+                <span class="counter-label">YEARS OF EXPERIENCE</span>
+              </div>
+              <div class="counter-block">
+                <span class="counter-number count-up" data-target="25" data-suffix="+">25+</span>
+                <span class="counter-label">COMPLETED PROJECTS</span>
+              </div>
+              <div class="counter-block">
+                <span class="counter-number count-up" data-target="4" data-prefix="0">04</span>
+                <span class="counter-label">GOVERNMENT PROJECTS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column (628px x 656px Image with Parallax & Reveal) -->
+          <div class="commitment-right section-reveal">
+            <div class="commitment-image-wrapper image-reveal-wrapper">
+              <img src="assets/commitment.jpg" alt="Lead construction engineer analyzing architectural blueprints on job site" class="commitment-img parallax-img" width="628" height="656" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 5: SERVICES (Mint Section, Sticky Left Column + Numbered List)
+         ========================================================================= -->
+    <section id="services" class="section-services" aria-labelledby="servicesSubtitle">
+      <div class="site-container">
+        <div class="services-grid">
+          <!-- Left Sticky Column (628px) -->
+          <div class="services-left">
+            <div class="services-sticky-box section-reveal">
+              <div class="subtitle-tag" id="servicesSubtitle">WHAT WE DO</div>
+              <h2 class="services-heading">
+                Comprehensive construction services engineered from concept to handover.
+              </h2>
+              <p class="services-paragraph">
+                From initial geological feasibility and zoning compliance to 3D BIM structural framing and interior commissioning, our multidisciplinary crews manage every critical pathway with pinpoint accuracy.
+              </p>
+              <div class="services-left-bottom">
+                <a href="#contact" class="btn-primary services-cta">
+                  <span class="roll-box">
+                    <span class="roll-primary">MORE SERVICES <i data-lucide="arrow-up-right"></i></span>
+                    <span class="roll-secondary">MORE SERVICES <i data-lucide="arrow-up-right"></i></span>
+                  </span>
+                </a>
+                <div class="services-contact-block">
+                  <span class="services-contact-lead">Contact us for a free consultation</span>
+                  <a href="tel:+18004829104" class="services-phone-link">
+                    <i data-lucide="phone" class="phone-inline-icon"></i>
+                    <span>Call us: +1 (800) 482-9104</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Numbered List -->
+          <div class="services-right">
+            <div class="services-list">
+              <!-- Item 01 -->
+              <article class="service-item section-reveal">
+                <div class="service-border-line" aria-hidden="true"></div>
+                <div class="service-item-inner">
+                  <div class="service-num">#01</div>
+                  <div class="service-body">
+                    <div class="service-header-row">
+                      <h3 class="service-title">Design-build services</h3>
+                      <i data-lucide="arrow-up-right" class="service-arrow-icon" aria-hidden="true"></i>
+                    </div>
+                    <p class="service-desc">
+                      Integrated project delivery unifying architectural ideation, structural feasibility, and turnkey construction beneath a single accountable contract.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 02 -->
+              <article class="service-item section-reveal">
+                <div class="service-border-line" aria-hidden="true"></div>
+                <div class="service-item-inner">
+                  <div class="service-num">#02</div>
+                  <div class="service-body">
+                    <div class="service-header-row">
+                      <h3 class="service-title">Structural engineering</h3>
+                      <i data-lucide="arrow-up-right" class="service-arrow-icon" aria-hidden="true"></i>
+                    </div>
+                    <p class="service-desc">
+                      Advanced seismic steel framing, mass-timber analysis, and post-tensioned reinforced concrete calculations certified for maximum structural longevity.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 03 -->
+              <article class="service-item section-reveal">
+                <div class="service-border-line" aria-hidden="true"></div>
+                <div class="service-item-inner">
+                  <div class="service-num">#03</div>
+                  <div class="service-body">
+                    <div class="service-header-row">
+                      <h3 class="service-title">Foundation construction</h3>
+                      <i data-lucide="arrow-up-right" class="service-arrow-icon" aria-hidden="true"></i>
+                    </div>
+                    <p class="service-desc">
+                      High-load deep caissons, grade beams, micro-piling, and specialized subterranean retention walls poured to millimeter engineering tolerance.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 04 -->
+              <article class="service-item section-reveal">
+                <div class="service-border-line" aria-hidden="true"></div>
+                <div class="service-item-inner">
+                  <div class="service-num">#04</div>
+                  <div class="service-body">
+                    <div class="service-header-row">
+                      <h3 class="service-title">Project management</h3>
+                      <i data-lucide="arrow-up-right" class="service-arrow-icon" aria-hidden="true"></i>
+                    </div>
+                    <p class="service-desc">
+                      Comprehensive procurement oversight, critical-path schedule optimization, site safety protocols, and transparent cost monitoring through our real-time portal.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 6: TESTIMONIALS & CLIENT LOGOS (Dark Ink Section)
+         ========================================================================= -->
+    <section id="testimonials" class="section-testimonials" aria-labelledby="testimonialsHeading">
+      <div class="site-container">
+        <!-- Header Row -->
+        <div class="testimonials-header section-reveal">
+          <div class="testimonials-trusted-block">
+            <div class="avatar-stack" aria-hidden="true">
+              <img src="assets/avatar-1.jpg" alt="Client 1" class="avatar-circle">
+              <img src="assets/avatar-2.jpg" alt="Client 2" class="avatar-circle">
+              <img src="assets/avatar-3.jpg" alt="Client 3" class="avatar-circle">
+              <img src="assets/avatar-4.jpg" alt="Client 4" class="avatar-circle">
+              <div class="avatar-circle avatar-plus">+99</div>
+            </div>
+            <div class="trusted-text-block">
+              <span class="trusted-eyebrow">TRUSTED BY</span>
+              <h2 id="testimonialsHeading" class="trusted-title">Our clients' satisfaction</h2>
+            </div>
+          </div>
+
+          <div class="testimonials-cta-block">
+            <a href="#contact" class="btn-default btn-white">
+              <span class="roll-box">
+                <span class="roll-primary">GET A QUOTE <i data-lucide="arrow-up-right"></i></span>
+                <span class="roll-secondary">GET A QUOTE <i data-lucide="arrow-up-right"></i></span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Testimonial Slider Region -->
+        <div class="testimonial-slider-container section-reveal" aria-live="polite" id="testimonialRegion">
+          <div class="testimonial-quote-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 38" width="48" height="38" fill="none">
+              <path d="M12 0 C5.37 0 0 5.37 0 12 C0 23.33 8 32 20 38 L22 34 C12 30 8 24 8 18 L12 18 C18.63 18 24 12.63 24 6 C24 2.69 21.31 0 18 0 Z M36 0 C29.37 0 24 5.37 24 12 C24 23.33 32 32 44 38 L46 34 C36 30 32 24 32 18 L36 18 C42.63 18 48 12.63 48 6 C48 2.69 45.31 0 42 0 Z" fill="rgba(255,255,255,0.2)"/>
+            </svg>
+          </div>
+
+          <!-- Slide 1 (Active) -->
+          <div class="testimonial-slide active" data-index="0">
+            <blockquote class="testimonial-quote">
+              "Vertex Builders brought remarkable engineering clarity and budget discipline to our 140,000 sq ft headquarters development. They navigated intricate geotechnical challenges without slipping our delivery schedule by a single day."
+            </blockquote>
+            <div class="testimonial-profile-row">
+              <div class="profile-details">
+                <span class="profile-name">Marcus Vance</span>
+                <span class="profile-role">CHIEF DEVELOPMENT OFFICER, PACIFIC REALTY GROUP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="testimonial-slide" data-index="1">
+            <blockquote class="testimonial-quote">
+              "Their commitment to sustainable mass-timber framing and transparent BIM modeling revolutionized how our architectural team worked on site. Vertex isn't just a builder; they are master problem solvers."
+            </blockquote>
+            <div class="testimonial-profile-row">
+              <div class="profile-details">
+                <span class="profile-name">Elena Rostova</span>
+                <span class="profile-role">PRINCIPAL ARCHITECT, STUDIO KINETIC</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="testimonial-slide" data-index="2">
+            <blockquote class="testimonial-quote">
+              "From seismic reinforcement to high-end architectural concrete finishes, Vertex delivered our civic center expansion with impeccable craftsmanship. Their jobsite safety record and team integrity are world-class."
+            </blockquote>
+            <div class="testimonial-profile-row">
+              <div class="profile-details">
+                <span class="profile-name">David Sterling</span>
+                <span class="profile-role">DIRECTOR OF CAPITAL ASSETS, BAY MUNICIPALITY</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Controls & Progress Line -->
+          <div class="testimonial-controls-row">
+            <div class="testimonial-progress-wrapper" aria-hidden="true">
+              <div class="testimonial-progress-bar" id="testimonialProgressBar"></div>
+            </div>
+            <div class="testimonial-nav-buttons">
+              <button type="button" class="slider-btn" id="prevTestimonialBtn" aria-label="Previous testimonial">
+                <i data-lucide="arrow-left"></i>
+              </button>
+              <button type="button" class="slider-btn" id="nextTestimonialBtn" aria-label="Next testimonial">
+                <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Client Logos Row (5 equal cells 259x100, marquee on tablet/mobile) -->
+        <div class="clients-section section-reveal">
+          <div class="subtitle-tag subtitle-dark">SOME OF OUR CLIENTS</div>
+          <div class="clients-marquee-wrapper" id="clientsMarquee">
+            <div class="clients-grid marquee-track">
+              <!-- Logo 1: Aethel Group -->
+              <div class="client-cell">
+                <svg viewBox="0 0 170 32" class="client-logo-svg" width="160" height="30">
+                  <path d="M10 26 L18 6 L26 26 M13 19 L23 19" stroke="white" stroke-width="2.2" fill="none"/>
+                  <text x="36" y="22" font-family="'Onest', sans-serif" font-size="14" font-weight="600" fill="white" letter-spacing="3">AETHEL GROUP</text>
+                </svg>
+              </div>
+              <!-- Logo 2: Novaplex -->
+              <div class="client-cell">
+                <svg viewBox="0 0 170 32" class="client-logo-svg" width="160" height="30">
+                  <rect x="8" y="7" width="18" height="18" stroke="white" stroke-width="2" fill="none"/>
+                  <line x1="8" y1="7" x2="26" y2="25" stroke="white" stroke-width="2"/>
+                  <text x="36" y="22" font-family="'Onest', sans-serif" font-size="14" font-weight="600" fill="white" letter-spacing="3">NOVAPLEX</text>
+                </svg>
+              </div>
+              <!-- Logo 3: Meridian Realty -->
+              <div class="client-cell">
+                <svg viewBox="0 0 170 32" class="client-logo-svg" width="160" height="30">
+                  <circle cx="17" cy="16" r="10" stroke="white" stroke-width="2" fill="none"/>
+                  <line x1="17" y1="6" x2="17" y2="26" stroke="white" stroke-width="2"/>
+                  <text x="36" y="22" font-family="'Onest', sans-serif" font-size="14" font-weight="600" fill="white" letter-spacing="3">MERIDIAN</text>
+                </svg>
+              </div>
+              <!-- Logo 4: Stone & Crane -->
+              <div class="client-cell">
+                <svg viewBox="0 0 170 32" class="client-logo-svg" width="160" height="30">
+                  <polygon points="17,6 27,24 7,24" stroke="white" stroke-width="2" fill="none"/>
+                  <text x="36" y="22" font-family="'Onest', sans-serif" font-size="13" font-weight="600" fill="white" letter-spacing="2.5">STONE &amp; CRANE</text>
+                </svg>
+              </div>
+              <!-- Logo 5: Vanguard Corp -->
+              <div class="client-cell">
+                <svg viewBox="0 0 170 32" class="client-logo-svg" width="160" height="30">
+                  <path d="M7 8 L17 24 L27 8" stroke="white" stroke-width="2.2" fill="none"/>
+                  <text x="36" y="22" font-family="'Onest', sans-serif" font-size="14" font-weight="600" fill="white" letter-spacing="3">VANGUARD</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 7: NEWS & ARTICLES (Two Blog Cards 628x405)
+         ========================================================================= -->
+    <section id="news" class="section-news" aria-labelledby="newsSubtitle">
+      <div class="site-container">
+        <!-- Header -->
+        <div class="news-header section-reveal">
+          <div class="news-header-left">
+            <div class="subtitle-tag" id="newsSubtitle">NEWS</div>
+            <h2 class="section-heading">Latest articles</h2>
+          </div>
+          <div class="news-header-right">
+            <a href="#contact" class="btn-primary">
+              <span class="roll-box">
+                <span class="roll-primary">MORE ARTICLES <i data-lucide="arrow-up-right"></i></span>
+                <span class="roll-secondary">MORE ARTICLES <i data-lucide="arrow-up-right"></i></span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2-Column Grid (628x405 cards with 40px gap) -->
+        <div class="news-grid">
+          <!-- Article 1: Sustainability -->
+          <article class="news-card section-reveal" tabindex="0">
+            <div class="news-thumb-wrapper image-reveal-wrapper">
+              <img src="assets/blog-1.jpg" alt="Sustainable mass timber architectural building with green living roof" class="news-thumb" width="628" height="320" loading="lazy">
+            </div>
+            <div class="news-content">
+              <div class="news-meta">
+                <span class="news-date">OCT 14, 2025</span>
+                <span class="meta-dot" aria-hidden="true">•</span>
+                <span class="news-category">SUSTAINABILITY</span>
+              </div>
+              <h3 class="news-title">
+                <span class="news-title-link">Net-Zero Mass Timber: Advancing Low-Carbon Commercial Architecture</span>
+              </h3>
+            </div>
+          </article>
+
+          <!-- Article 2: Home Improvement -->
+          <article class="news-card section-reveal" tabindex="0">
+            <div class="news-thumb-wrapper image-reveal-wrapper">
+              <img src="assets/blog-2.jpg" alt="Lead contractor taking precision laser measurements during residential renovation" class="news-thumb" width="628" height="320" loading="lazy">
+            </div>
+            <div class="news-content">
+              <div class="news-meta">
+                <span class="news-date">NOV 08, 2025</span>
+                <span class="meta-dot" aria-hidden="true">•</span>
+                <span class="news-category">HOME IMPROVEMENT</span>
+              </div>
+              <h3 class="news-title">
+                <span class="news-title-link">Essential Pre-Construction Milestones for Complex Residential Expansions</span>
+              </h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 8: CONTACT FORM (Mint Section, Split Contact with Supabase)
+         ========================================================================= -->
+    <section id="contact" class="section-contact" aria-labelledby="contactSubtitle">
+      <div class="site-container">
+        <div class="contact-grid">
+          <!-- Left Column (628px) -->
+          <div class="contact-left section-reveal">
+            <div class="subtitle-tag" id="contactSubtitle">LET'S WORK TOGETHER</div>
+            <h2 class="contact-heading">
+              Let's construct your next defining architectural landmark together.
+            </h2>
+            <p class="contact-paragraph">
+              Whether you possess fully engineered blueprints or an initial site conception, our construction principals are ready to advise on engineering feasibility, scheduling, and budget.
+            </p>
+
+            <!-- Decorative Bleed Image -->
+            <div class="contact-decor-wrapper" aria-hidden="true">
+              <img src="assets/contact-decor.jpg" alt="Modern luxury architectural residence" class="contact-decor-img" width="624" height="401" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Right Column: Form Card (White card, 0 radius, 40px padding, 628px width) -->
+          <div class="contact-right section-reveal">
+            <div class="contact-card">
+              <h3 class="contact-card-title">Get in touch with us today!</h3>
+
+              <form id="contactForm" class="contact-form" novalidate aria-describedby="formStatusRegion">
+                <div class="form-grid">
+                  <!-- First Name -->
+                  <div class="form-group">
+                    <label for="firstName" class="form-label">First name *</label>
+                    <input type="text" id="firstName" name="first_name" class="form-input" placeholder="Enter your first name" required autocomplete="given-name" aria-required="true">
+                    <span class="form-error-msg" id="firstNameError" role="alert" aria-live="polite"></span>
+                  </div>
+
+                  <!-- Last Name -->
+                  <div class="form-group">
+                    <label for="lastName" class="form-label">Last name *</label>
+                    <input type="text" id="lastName" name="last_name" class="form-input" placeholder="Enter your last name" required autocomplete="family-name" aria-required="true">
+                    <span class="form-error-msg" id="lastNameError" role="alert" aria-live="polite"></span>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="form-group">
+                    <label for="email" class="form-label">Email *</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email address" required autocomplete="email" aria-required="true">
+                    <span class="form-error-msg" id="emailError" role="alert" aria-live="polite"></span>
+                  </div>
+
+                  <!-- Phone Number -->
+                  <div class="form-group">
+                    <label for="phone" class="form-label">Phone number</label>
+                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter your phone number" autocomplete="tel">
+                    <span class="form-error-msg" id="phoneError" role="alert" aria-live="polite"></span>
+                  </div>
+
+                  <!-- Message (Full Width) -->
+                  <div class="form-group full-width">
+                    <label for="message" class="form-label">Message *</label>
+                    <textarea id="message" name="message" class="form-textarea" placeholder="Type a message here..." rows="5" required aria-required="true"></textarea>
+                    <span class="form-error-msg" id="messageError" role="alert" aria-live="polite"></span>
+                  </div>
+                </div>
+
+                <!-- Submit Button Row -->
+                <div class="form-submit-row">
+                  <button type="submit" id="submitBtn" class="btn-primary submit-btn">
+                    <span class="roll-box" id="btnRollBox">
+                      <span class="roll-primary" id="btnPrimaryText">SEND A MESSAGE <i data-lucide="arrow-up-right"></i></span>
+                      <span class="roll-secondary" id="btnSecondaryText">SEND A MESSAGE <i data-lucide="arrow-up-right"></i></span>
+                    </span>
+                  </button>
+                </div>
+              </form>
+
+              <!-- Success Panel (Fades in upon completion) -->
+              <div id="formSuccessPanel" class="form-success-panel" role="region" aria-live="polite" style="display: none;">
+                <div class="success-icon-box">
+                  <i data-lucide="check" class="success-check-icon"></i>
+                </div>
+                <h4 class="success-heading">Thank You!</h4>
+                <p class="success-message">
+                  Thanks — we'll be in touch within 24 hours. Your inquiry has been securely routed to our senior project estimating team.
+                </p>
+                <button type="button" id="resetFormBtn" class="btn-default btn-ink success-reset-btn">
+                  <span>SEND ANOTHER MESSAGE</span>
+                </button>
+              </div>
+
+              <!-- Screen reader status announce region -->
+              <div id="formStatusRegion" class="sr-only" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 9: FAQ (Split Accordion with 9 Items)
+         ========================================================================= -->
+    <section id="faq" class="section-faq" aria-labelledby="faqSubtitle">
+      <div class="site-container">
+        <div class="faq-grid">
+          <!-- Left Column: Sticky (top 120px) -->
+          <div class="faq-left">
+            <div class="faq-sticky-box section-reveal">
+              <div class="subtitle-tag" id="faqSubtitle">FAQ</div>
+              <h2 class="faq-heading">Frequently asked questions</h2>
+
+              <div class="faq-bottom-block">
+                <h3 class="faq-bottom-title">Have different questions?</h3>
+                <p class="faq-bottom-text">Our engineering and estimating team answers inquiries promptly.</p>
+                <a href="tel:+18004829104" class="faq-phone-link">
+                  <i data-lucide="phone" class="phone-inline-icon"></i>
+                  <span>Call us: +1 (800) 482-9104</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Accordion with 9 items -->
+          <div class="faq-right">
+            <div class="faq-accordion" role="region" aria-label="Frequently Asked Questions Accordion">
+              <!-- Item 1 (Open by default) -->
+              <div class="faq-item active" data-faq-index="1">
+                <button type="button" class="faq-question-btn" aria-expanded="true" aria-controls="faq-ans-1" id="faq-q-1">
+                  <span class="faq-question-text">What types of construction projects do you handle?</span>
+                  <span class="faq-icon-box" aria-hidden="true">
+                    <i data-lucide="plus" class="faq-plus-icon"></i>
+                  </span>
+                </button>
+                <div class="faq-answer-wrapper" id="faq-ans-1" role="region" aria-labelledby="faq-q-1">
+                  <div class="faq-answer-inner">
+                    <p class="faq-answer-text">
+                      We specialize in multi-family residential developments, mid-to-high-rise commercial towers, institutional education centers, and heavy civil earthworks. Our turnkey capability spans ground-up builds and comprehensive seismic retrofits.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="faq-item" data-faq-index="2">
+                <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-2" id="faq-q-2">
+                  <span class="faq-question-text">How do I get a quote for my project?</span>
+                  <span class="faq-icon-box" aria-hidden="true">
+                    <i data-lucide="plus" class="faq-plus-icon"></i>
+                  </span>
+                </button>
+                <div class="faq-answer-wrapper" id="faq-ans-2" role="region" aria-labelledby="faq-q-2">
+                  <div class="faq-answer-inner">
+                    <p class="faq-answer-text">
+                      You can submit your preliminary project details through our contact form or call our estimating department directly. We conduct an initial scope review and deliver a comprehensive feasibility and cost estimate within 5 to 7 business days.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="faq-item" data-faq-index="3">
+                <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-3" id="faq-q-3">
+                  <span class="faq-question-text">What is your project timeline?</span>
+                  <span class="faq-icon-box" aria-hidden="true">
+                    <i data-lucide="plus" class="faq-plus-icon"></i>
+                  </span>
+                </button>
+                <div class="faq-answer-wrapper" id="faq-ans-3" role="region" aria-labelledby="faq-q-3">
+                  <div class="faq-answer-inner">
+                    <p class="faq-answer-text">
+                      Timelines are tailored to structural complexity. Typical commercial builds run between 12 and 24 months, while residential renovations require 4 to 9 months. We establish milestone guarantees backed by liquidated performance buffers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="faq-item" data-faq-index="4">
+                <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-4" id="faq-q-4">
+                  <span class="faq-question-text">Do you provide design services?</span>
+                  <span class="faq-icon-box" aria-hidden="true">
+                    <i data-lucide="plus" class="faq-plus-icon"></i>
+                  </span>
+                </button>
+                <div class="faq-answer-wrapper" id="faq-ans-4" role="region" aria-labelledby="faq-q-4">
+                  <div class="faq-answer-inner">
+                    <p class="faq-answer-text">
+                      Yes. Our integrated design-build division includes licensed in-house architects, structural engineers, and BIM specialists who collaborate directly with builders to minimize change orders and maximize constructability.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 5 -->
+              <div class="faq-item" data-faq-index="5">
+                <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-5" id="faq-q-5">
+                  <span class="faq-question-text">How do you ensure quality and safety on your projects?</span>
+                  <span class="faq-icon-box" aria-hidden="true">
+                    <i data-lucide="plus" class="faq-plus-icon"></i>
+                  </span>
+                </button>
+                <div class="faq-answer-wrapper" id="faq-ans-5" role="region" aria-labelledby="faq-q-5">
+                  <div class="faq-answer-inner">
+                    <p class="faq-answer-text">
+                      Every site maintains a dedicated OSHA-certified safety director, daily safety briefings, continuous digital drone monitoring, and rigorous multi-stage third-party structural testing on concrete, steel, and electrical envelopes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 6 -->
+              <div class="faq-item" data-faq-index="6">
+                <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-6" id="faq-q-6">
+                  <span class="faq-question-text">Can you handle custom construction projects?</span>
+                  <span class="faq-icon-box" aria-hidden="true">
+                    <i data-lucide="plus" class="faq-plus-icon"></i>
+                  </span>
+                </button>
+                <div class="faq-answer-wrapper" id="faq-ans-6" role="region" aria-labelledby="faq-q-6">
+                  <div class="faq-answer-inner">
+                    <p class="faq-answer-text">
+                      Absolutely. We excel in custom bespoke structural challenges—from cantilevers and complex curtain walls to geothermal foundations and high-tolerance cleanrooms.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 7 -->
+              <div class="faq-item" data-faq-index="7">
+                <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-7" id="faq-q-7">
+                  <span class="faq-question-text">What is your warranty policy?</span>
+                  <span class="faq-icon-box" aria-hidden="true">
+                    <i data-lucide="plus" class="faq-plus-icon"></i>
+                  </span>
+                </button>
+                <div class="faq-answer-wrapper" id="faq-ans-7" role="region" aria-labelledby="faq-q-7">
+                  <div class="faq-answer-inner">
+                    <p class="faq-answer-text">
+                      All projects include our comprehensive 10-year structural warranty, a 2-year mechanical/electrical/plumbing warranty, and a dedicated 1-year cosmetic workmanship guarantee with scheduled milestone walk-throughs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 8 -->
+              <div class="faq-item" data-faq-index="8">
+                <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-8" id="faq-q-8">
+                  <span class="faq-question-text">How do you handle changes or modifications during the project?</span>
+                  <span class="faq-icon-box" aria-hidden="true">
+                    <i data-lucide="plus" class="faq-plus-icon"></i>
+                  </span>
+                </button>
+                <div class="faq-answer-wrapper" id="faq-ans-8" role="region" aria-labelledby="faq-q-8">
+                  <div class="faq-answer-inner">
+                    <p class="faq-answer-text">
+                      We utilize a transparent digital change-order portal. No adjustment proceeds without an itemized cost calculation, schedule impact assessment, and formal digital sign-off from the project owner.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 9 -->
+              <div class="faq-item" data-faq-index="9">
+                <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-9" id="faq-q-9">
+                  <span class="faq-question-text">Do you offer sustainable construction solutions?</span>
+                  <span class="faq-icon-box" aria-hidden="true">
+                    <i data-lucide="plus" class="faq-plus-icon"></i>
+                  </span>
+                </button>
+                <div class="faq-answer-wrapper" id="faq-ans-9" role="region" aria-labelledby="faq-q-9">
+                  <div class="faq-answer-inner">
+                    <p class="faq-answer-text">
+                      Yes. We are LEED-accredited builders specializing in mass timber, low-carbon geopolymer concrete, solar envelope integration, rainwater reclamation systems, and high-efficiency thermal envelopes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       SECTION 10: FOOTER (Dark Ink Section with CTA, Columns, Legal)
+       ========================================================================= -->
+  <footer id="footer" class="site-footer" aria-label="Footer">
+    <div class="site-container">
+      <!-- CTA Row -->
+      <div class="footer-cta-row section-reveal">
+        <div class="footer-cta-left">
+          <h2 class="footer-cta-heading">Ready to bring your next architectural vision to life?</h2>
+          <div class="footer-cta-btn-wrap">
+            <a href="#contact" class="btn-secondary footer-cta-btn">
+              <span class="roll-box">
+                <span class="roll-primary">GET A QUOTE <i data-lucide="arrow-up-right"></i></span>
+                <span class="roll-secondary">GET A QUOTE <i data-lucide="arrow-up-right"></i></span>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="footer-cta-right" aria-hidden="true">
+          <!-- 200x200 white line-art city skyline icon -->
+          <svg class="footer-skyline-svg" viewBox="0 0 200 200" width="200" height="200" fill="none">
+            <path class="footer-skyline-path" d="M 10 195 L 25 195 L 25 130 L 55 130 L 55 195 L 70 195 L 70 85 L 105 85 L 105 45 L 120 45 L 120 195 L 135 195 L 135 110 L 165 75 L 175 75 L 175 195 L 190 195 M 112 45 L 112 18 M 150 195 L 150 170 L 160 170 L 160 195 M 35 145 L 45 145 M 35 160 L 45 160 M 80 100 L 95 100 M 80 115 L 95 115 M 80 130 L 95 130 M 80 145 L 95 145 M 80 160 L 95 160" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="square" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- 3 Columns Row (379px each with 80px gaps) -->
+      <div class="footer-columns-row">
+        <!-- Column 1: About & Social -->
+        <div class="footer-col footer-col-about section-reveal">
+          <a href="#hero" class="nav-logo footer-logo" aria-label="VERTEX BUILDERS Homepage">
+            <svg class="logo-glyph" viewBox="0 0 28 28" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="3" y="10" width="10" height="15" />
+              <rect x="15" y="4" width="10" height="21" />
+              <line x1="6" y1="14" x2="10" y2="14" />
+              <line x1="6" y1="18" x2="10" y2="18" />
+              <line x1="18" y1="8" x2="22" y2="8" />
+              <line x1="18" y1="12" x2="22" y2="12" />
+              <line x1="18" y1="16" x2="22" y2="16" />
+            </svg>
+            <span class="logo-text">VERTEX <strong>BUILDERS</strong></span>
+          </a>
+          <p class="footer-col-desc">
+            Pioneering commercial, civil, and architectural construction across the United States with enduring precision and sustainable integrity since 2015.
+          </p>
+          <div class="footer-social-row" aria-label="Social media channels">
+            <a href="https://facebook.com" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i data-lucide="facebook"></i>
+            </a>
+            <a href="https://instagram.com" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i data-lucide="instagram"></i>
+            </a>
+            <a href="https://linkedin.com" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i data-lucide="linkedin"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Contact Info -->
+        <div class="footer-col footer-col-contact section-reveal">
+          <div class="footer-eyebrow">CONTACT INFO</div>
+          <address class="footer-address">
+            742 Montgomery St, San Francisco, CA 94111
+          </address>
+          <div class="footer-eyebrow footer-eyebrow-spaced">LOOKING FOR EXPEDITED ASSISTANCE?</div>
+          <div class="footer-quick-contacts">
+            <a href="mailto:inquiries@vertexbuilders.com" class="footer-contact-link">inquiries@vertexbuilders.com</a>
+            <a href="tel:+18004829104" class="footer-contact-link">(800) 482-9104</a>
+          </div>
+        </div>
+
+        <!-- Column 3: Links (Two sub-columns 149px: Pages & Legal) -->
+        <div class="footer-col footer-col-links section-reveal">
+          <div class="footer-subcol">
+            <div class="footer-eyebrow">PAGES</div>
+            <ul class="footer-nav-list">
+              <li><a href="#about" class="text-roll-link"><span class="roll-box"><span class="roll-primary">About us</span><span class="roll-secondary">About us</span></span></a></li>
+              <li><a href="#projects" class="text-roll-link"><span class="roll-box"><span class="roll-primary">Projects</span><span class="roll-secondary">Projects</span></span></a></li>
+              <li><a href="#services" class="text-roll-link"><span class="roll-box"><span class="roll-primary">Services</span><span class="roll-secondary">Services</span></span></a></li>
+              <li><a href="#news" class="text-roll-link"><span class="roll-box"><span class="roll-primary">Blog</span><span class="roll-secondary">Blog</span></span></a></li>
+              <li><a href="#faq" class="text-roll-link"><span class="roll-box"><span class="roll-primary">FAQ</span><span class="roll-secondary">FAQ</span></span></a></li>
+              <li><a href="#contact" class="text-roll-link"><span class="roll-box"><span class="roll-primary">Contact us</span><span class="roll-secondary">Contact us</span></span></a></li>
+            </ul>
+          </div>
+          <div class="footer-subcol">
+            <div class="footer-eyebrow">LEGAL</div>
+            <ul class="footer-nav-list">
+              <li><a href="#privacy" class="text-roll-link"><span class="roll-box"><span class="roll-primary">Privacy policy</span><span class="roll-secondary">Privacy policy</span></span></a></li>
+              <li><a href="#terms" class="text-roll-link"><span class="roll-box"><span class="roll-primary">Terms & conditions</span><span class="roll-secondary">Terms & conditions</span></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div class="footer-copyright">
+          © 2026 VERTEX BUILDERS. All rights reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#coming-soon" class="footer-bottom-link">Coming soon</a>
+          <span class="bottom-sep">·</span>
+          <a href="#404" class="footer-bottom-link">404</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       BACK TO TOP BUTTON (48px Ink Square, appears after 1200px scroll)
+       ========================================================================= -->
+  <button type="button" id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top of page">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+</body>
+</html>

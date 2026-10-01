@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+.npm
+
+# Temporary verification scripts & screenshots
+verify_suite.js
+test_form.js
+preview-*.png
+section-*.png
+test-*.png
+shot*.png
+
+# Vercel
+.vercel
+
+# Operating System Files
+.DS_Store
+Thumbs.db
