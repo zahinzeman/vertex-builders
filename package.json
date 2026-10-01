@@ -1,0 +1,9 @@
+{
+  "name": "vertex-builders",
+  "version": "1.0.0",
+  "description": "Vertex Builders — Production Single-Page Website for Architecture & Construction",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static build ready'"
+  }
+}
